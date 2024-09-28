@@ -15,6 +15,13 @@ const stats = [
   { value: ['React, Next.js, Flask, Django'], title: 'Framework / Tools' },
 ]
 
+const scrollToElement = (id) => {
+  document.getElementById(id).scrollIntoView({
+    behavior: "smooth", // Smooth scroll effect
+    block: "start",     // Align at the start of the element
+  });
+};
+
 export default function About() {
   return (
     <div className="bg-primary px-32 py-32" >
@@ -35,14 +42,14 @@ export default function About() {
                 Beyond tech, I love exploring the world, whether it&apos;s hiking through beautiful landscapes, traveling 
                 to new destinations, or diving into different cuisines. 
               </p>
-              <p className="mt-6 text-lg leading-8 text-secondary">
+              <p className="my-6 text-lg leading-8 text-secondary">
                 As a software engineer, I&apos;m eager to continue growing and learning, particularly in front-end and 
                 full-stack development. I am excited to bring creative solutions and technical expertise to 
                 impactful projects. 
               </p>
-              <p className="mt-6 text-lg leading-8 text-gray-300">
+              <a className="text-lg leading-8 text-secondary hover:text-shadow-glow-pink" onClick={() =>{scrollToElement('contact')}} >
                 Let&apos;s connect!
-              </p>
+              </a>
 
             </div>
 
