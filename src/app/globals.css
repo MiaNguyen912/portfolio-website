@@ -18,16 +18,136 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  min-width: 837px;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+
+/* ------------------------- HOME --------------------------- */
+
+.parallax_home_cover {
+  background-image: url("/home_bg.png");
+  min-height: 950px; 
+  z-index: -1;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.parallax_home_cover::after{
+  content: "";
+  background: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.floating-image {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+/* --------------------------------- CONTACT ---------------------------------------- */
+
+@keyframes extend {
+    0% {
+      width: 100%;
+    } 100% {
+      width: 20%;
+      border-radius: 100px;
+      background: #6fb07f;
+    }
+}
+@keyframes disappear {
+    0% {
+    opacity: 1;
+    } 20% {
+    color: #fff;
+    } 100% {
+    opacity: 0;
+    }
+}
+@keyframes appear {
+    0% {
+    opacity: 0;
+    } 70% {
+    opacity: 0;
+    } 100% {
+    opacity: 1;
+    }
+}
+
+
+.submitted-checkmark  {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  filter: alpha(opacity=0);
+  opacity: 0
+}
+
+.submit-button:focus {
+    animation: extend 1s ease-in-out;
+    animation-fill-mode: both
+}
+
+.submit-button:focus .submit-text {
+    animation: disappear 1s ease-in-out;
+    animation-fill-mode: both
+}
+
+.submit-button:focus .submitted-checkmark { 
+    animation: appear 1s ease-in-out;
+    animation-fill-mode: both
+}
+
+
+input:-webkit-autofill {
+  background-color: #021526 !important;
+  color: #f4d9ea !important; 
+  transition: background-color 5000s ease-in-out 0s, color 5000s ease-in-out 0s; /* Prevents the background color from flashing back to the default autofill color on focus or hover.*/
+}
+
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  background-color: #021526 !important;
+  color: #f4d9ea !important;
+  transition: background-color 5000s ease-in-out 0s, color 5000s ease-in-out 0s; /* Prevents the background color from flashing back to the default autofill color on non-focus or non-hover.*/
+
 }

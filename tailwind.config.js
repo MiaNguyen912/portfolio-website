@@ -7,6 +7,13 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        "primary": "#021526",
+        "secondary": "#f4d9ea",
+        "tertiary": '#e17caa',
+        "accent": "#D67BFF",
+        
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -14,5 +21,18 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      const newUtilities = {
+       '.text-shadow-glow-pink': {
+          textShadow: '0 0 20px #e17caa, 0 0 40px #f4d9ea',
+        },
+        '.text-shadow-glow-yellow': {
+          textShadow: '0 0 20px rgba(255, 255, 0, 1), 0 0 40px rgba(255, 255, 0, 0.6)',
+        },
+        
+      };
+      addUtilities(newUtilities, ['responsive', 'hover']);
+    },
+  ],
 };
