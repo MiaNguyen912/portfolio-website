@@ -3,6 +3,7 @@ import React from 'react'
 import axios from 'axios'; 
 import { useState } from 'react'
 import { Pacifico } from 'next/font/google';
+import Image from 'next/image';
 
 
 const pacifico = Pacifico({
@@ -94,7 +95,7 @@ const Contact = () => {
                                 </svg>
                                 Submit
                             </span>
-                            <img src="https://i.cloudup.com/2ZAX3hVsBE-3000x3000.png" height="40" width="40" className='submitted-checkmark '></img>
+                            <Image src="https://i.cloudup.com/2ZAX3hVsBE-3000x3000.png" alt="send icon" height="40" width="40" className='submitted-checkmark ' />
 
                         </button>
                     </form>
