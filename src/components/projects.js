@@ -83,9 +83,8 @@ export default function About() {
 
           <ul tech_stack="list" className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-16 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-2 xl:grid-cols-3" >
             {projects.map((project) => (
-              <li key={projects.name}>
+              <li key={project.name}>
                 <a href={project.url} target="_blank" className='transition-transform duration-300 ease-in-out  hover:brightness-110'>
-
                     <Image 
                       alt={project.name}
                       src={project.image} 

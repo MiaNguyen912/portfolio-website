@@ -54,12 +54,12 @@ export default function About() {
           <div className="mx-auto mt-12 max-w-2xl lg:mx-0 lg:max-w-none ">
             <dl className="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4 ">
               {stats.map((stat) => (
-                <div key={stat.name} className="flex flex-col-reverse justify-end">
+                <div key={stat.title} className="flex flex-col-reverse justify-end">
                   <dt className="text-base leading-7 text-tertiary">
                     {stat.value.map((line, idx) => (
                       <span key={idx}>{line}</span>
                     ))}
-                    </dt>
+                  </dt>
                   <dd className={`text-2xl mb-4 font-bold leading-9 tracking-tight brightness-110 text-tertiary `}>{stat.title}</dd>
                 </div>
               ))}

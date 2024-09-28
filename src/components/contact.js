@@ -31,7 +31,7 @@ const Contact = () => {
         event.preventDefault(); // Prevent the default form submission behavior
         console.log(formData);
 
-        // make a POST request to the Resend server with the form data (See the details of the post request in route.js)
+        // make a POST request to the Resend server with the form data (See the details of the post request in index.js)
         try {
             const response = await axios.post('/api/send', formData);
             console.log('Success:', response.data);
