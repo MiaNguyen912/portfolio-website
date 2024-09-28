@@ -27,7 +27,7 @@ export default function Header({activeSection}) {
 
         <div className=" lg:flex lg:gap-x-12 right-0">
           {navigation.map((item) => (
-              <a key={item.name} onClick={() =>{scrollToElement(item.id)}} className={`${activeSection === item.id? " text-shadow-glow-yellow " : '' } text-lg font-semibold leading-6 text-white transition-all duration-300 ease-in-out hover:text-shadow-glow-yellow hover:scale-110 hover:cursor-pointer`} > 
+              <a key={item.name} onClick={() =>{scrollToElement(item.id)}} className={`${activeSection === item.id? " text-shadow-glow-pink " : '' } text-lg font-semibold leading-6 text-white transition-all duration-300 ease-in-out hover:text-shadow-glow- hover:scale-110 hover:cursor-pointer`} > 
                 {item.name}
               </a>
           ))}

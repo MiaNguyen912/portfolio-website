@@ -28,6 +28,8 @@ body {
 }
 
 
+
+
 /* ------------------------- HOME --------------------------- */
 
 .parallax_home_cover {
@@ -91,7 +93,7 @@ body {
     } 100% {
       width: 20%;
       border-radius: 100px;
-      background: #6fb07f;
+      background: #D67BFF;
     }
 }
 @keyframes disappear {
