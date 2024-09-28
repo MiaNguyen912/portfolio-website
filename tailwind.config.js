@@ -27,9 +27,7 @@ module.exports = {
        '.text-shadow-glow-pink': {
           textShadow: '0 0 20px #e17caa, 0 0 40px #f4d9ea',
         },
-        '.text-shadow-glow-yellow': {
-          textShadow: '0 0 20px rgba(255, 255, 0, 1), 0 0 40px rgba(255, 255, 0, 0.6)',
-        },
+
         
       };
       addUtilities(newUtilities, ['responsive', 'hover']);

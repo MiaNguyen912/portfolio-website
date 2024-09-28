@@ -58,7 +58,7 @@ const navigation = {
 
           <div className="flex justify-center space-x-10 mb-10">
             {navigation.social.map((item) => (
-              <a key={item.name} href={item.href} target="_blank" className="text-secondary hover:text-gray-500">
+              <a key={item.name} href={item.href} target="_blank" className="text-secondary transition duration-300 ease-in-out hover:text-tertiary hover:scale-125 ">
                 <span className="sr-only">{item.name}</span>
                 <item.icon aria-hidden="true" className="h-6 w-6" />
               </a>
