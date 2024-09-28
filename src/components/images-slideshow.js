@@ -3,13 +3,13 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import classes from './images-slideshow.module.css';
 
-import image1 from '/src/app/assets/profile_image_1.jpg';
-import image2 from '/src/app/assets/profile_image_2.JPG';
-import image3 from '/src/app/assets/profile_image_3.jpg';
-import image4 from '/src/app/assets/profile_image_4.jpg';
-import image5 from '/src/app/assets/profile_image_5.jpg';
-import image6 from '/src/app/assets/profile_image_6.jpg';
-import image7 from '/src/app/assets/profile_image_7.jpg';
+import image1 from '@/assets/profile_image_1.jpg';
+import image2 from '@/assets/profile_image_2.JPG';
+import image3 from '@/assets/profile_image_3.jpg';
+import image4 from '@/assets/profile_image_4.jpg';
+import image5 from '@/assets/profile_image_5.jpg';
+import image6 from '@/assets/profile_image_6.jpg';
+import image7 from '@/assets/profile_image_7.jpg';
 
 const images = [
   { image: image1, alt: 'profile image' },

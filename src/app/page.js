@@ -1,13 +1,10 @@
 'use client';
-import Image from "next/image";
-import Link from "next/link";
-import Header from "./components/header";
-import Home from "./components/home";
-import About from "./components/about";
-import Projects from "./components/projects";
-import ImageSlideshow from "./components/images-slideshow";
-import Contact from "./components/contact";
-import Footer from "./components/footer";
+import Header from "@/components/header";
+import Home from "@/components/home";
+import About from "@/components/about";
+import Projects from "@/components/projects";
+import Contact from "@/components/contact";
+import Footer from "@/components/footer";
 import { useEffect, useState } from "react";
 
 export default function Main() {

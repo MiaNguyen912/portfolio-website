@@ -3,11 +3,11 @@
 import { useState } from 'react'
 import { Pacifico } from 'next/font/google';
 import Image from 'next/image';
-import fablix_image from '/src/app/assets/fablix.png';
-import zotquest_image from '/src/app/assets/zot_quest.png';
-import zotsearch_image from '/src/app/assets/zot_search.png';
-import transtar_image from '/src/app/assets/transtar.png';
-import flappybird_image from '/src/app/assets/flappy_bird.png';
+import fablix_image from '@/assets/fablix.png';
+import zotquest_image from '@/assets/zot_quest.png';
+import zotsearch_image from '@/assets/zot_search.png';
+import transtar_image from '@/assets/transtar.png';
+import flappybird_image from '@/assets/flappy_bird.png';
 
 const pacifico = Pacifico({
   subsets: ['latin'],
