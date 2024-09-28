@@ -44,7 +44,7 @@ const projects = [
     url: 'https://transtarair.com',
   },
   {
-    name: 'Fappy Bird',
+    name: 'Flappy Bird',
     tech_stack: 'JavaScript, React.js',
     image: flappybird_image,
     description: 'Flappy Bird game clone.',
