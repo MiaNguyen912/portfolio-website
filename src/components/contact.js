@@ -56,34 +56,34 @@ const Contact = () => {
 
 
     return (
-        <div className="xl:px-64 lg:px-48 px-24 py-32 mx-auto bg-primary flex justify-center items-center">
-            <div className="max-w-[70%] ">
+        <div className="2xl:px-64 lg:px-32 lg:py-32 md:px-16 px-8 py-12 mx-auto bg-primary flex justify-center items-center">
+            <div className="">
 
-                <div className="bg-secondary/10 p-10 rounded-lg shadow-2xl shadow-black">
+                <div className="bg-secondary/10 xl:p-10 p-4 rounded-lg shadow-2xl shadow-black">
                     <form className="my-4 space-y-4" onSubmit={handleSubmit}>
-                        <h1 className={`xl:text-7xl text-5xl font-semibold ${pacifico.className} my-6 mx-auto text-transparent w-fit bg-clip-text bg-gradient-to-r brightness-125 from-accent to-tertiary`}>Contact me</h1>
+                        <h1 className={`lg:text-7xl text-4xl font-semibold ${pacifico.className} lg:my-6 my-2 mx-auto text-transparent w-fit bg-clip-text bg-gradient-to-r brightness-125 from-accent to-tertiary`}>Contact me</h1>
 
 
                         <input type='text' placeholder='Name' required
-                            className="w-full rounded-lg py-3 px-4 text-secondary text-sm outline-tertiary hover:outline-dashed hover:outline-2 focus:outline-dashed focus:outline-2 bg-primary ring-tertiary focus:ring-tertiary" 
+                            className="w-full rounded-lg lg:py-3 py-2 px-4 text-secondary text-sm outline-tertiary hover:outline-dashed hover:outline-2 focus:outline-dashed focus:outline-2 bg-primary ring-tertiary focus:ring-tertiary" 
                             name='name'
                             value={formData.name} // specify the value of the input helps make the input controlled by component's state rather than letting the DOM manage it => good for handling Form Reset and Updates
                             onChange={handleInputChange} // function called on onChange will have an event object as an argument
                         />
                         <input type='email' placeholder='Email' 
-                            className="w-full rounded-lg py-3 px-4 text-secondary text-sm outline-tertiary hover:outline-dashed hover:outline-2 focus:outline-dashed focus:outline-2 bg-primary ring-tertiary focus:ring-tertiary" 
+                            className="w-full rounded-lg lg:py-3 py-2 px-4 text-secondary text-sm outline-tertiary hover:outline-dashed hover:outline-2 focus:outline-dashed focus:outline-2 bg-primary ring-tertiary focus:ring-tertiary" 
                             name='email'
                             value = {formData.email}
                             onChange={handleInputChange}
                         />
                         <input type='text' placeholder='Subject' required
-                            className="w-full rounded-lg py-3 px-4 text-secondary text-sm outline-tertiary hover:outline-dashed hover:outline-2 focus:outline-dashed focus:outline-2 bg-primary ring-tertiary focus:ring-tertiary" 
+                            className="w-full rounded-lg lg:py-3 py-2 px-4 text-secondary text-sm outline-tertiary hover:outline-dashed hover:outline-2 focus:outline-dashed focus:outline-2 bg-primary ring-tertiary focus:ring-tertiary" 
                             name='subject'
                             value={formData.subject}
                             onChange={handleInputChange}
                         />
                         <textarea placeholder='Message' rows="6" required
-                            className="w-full rounded-lg px-4 text-secondary text-sm pt-3 outline-tertiary hover:outline-dashed hover:outline-2 focus:outline-dashed focus:outline-2 bg-primary ring-tertiary focus:ring-tertiary"
+                            className="w-full rounded-lg px-4 text-secondary text-sm lg:py-3 py-2 outline-tertiary hover:outline-dashed hover:outline-2 focus:outline-dashed focus:outline-2 bg-primary ring-tertiary focus:ring-tertiary"
                             name='message'
                             value={formData.message}
                             onChange={handleInputChange}

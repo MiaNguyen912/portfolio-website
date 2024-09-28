@@ -78,23 +78,23 @@ export default function About() {
 
         <div className="mx-auto max-w-7xl sm:my-40 lg:px-8">
           <div className="mx-auto max-w-2xl text-center " >
-            <h2 className={`text-4xlfont-bold tracking-tight text-transparent pb-6  bg-clip-text bg-gradient-to-r brightness-125 from-pink-600 to-blue-300 sm:text-6xl ${pacifico.className}`} >My projects</h2>
+            <h2 className={`text-4xl font-bold tracking-tight text-transparent pb-6  bg-clip-text bg-gradient-to-r brightness-125 from-pink-600 to-blue-300 sm:text-6xl ${pacifico.className}`} >My projects</h2>
           </div>
 
-          <ul tech_stack="list" className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-16 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-2 xl:grid-cols-3" >
+          <ul tech_stack="list" className="md:mx-auto mx-8 lg:mt-20 md:mt-8 mt-4 grid max-w-2xl grid-cols-1 gap-x-16 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-2 xl:grid-cols-3" >
             {projects.map((project) => (
               <li key={project.name}>
                 <a href={project.url} target="_blank" className='transition-transform duration-300 ease-in-out  hover:brightness-110'>
                     <Image 
                       alt={project.name}
                       src={project.image} 
-                      className="aspect-[14/10] w-full rounded-2xl object-fit transition-all duration-300 ease-in-out hover:rotate-3 hover:scale-110 hover:shadow-lg hover:shadow-black " />
+                      className="aspect-[14/10] w-full mx-auto rounded-2xl object-fit transition-all duration-300 ease-in-out hover:rotate-3 hover:scale-110 hover:shadow-lg hover:shadow-black " />
                 </a>
                 <span className='mt-6 block'>
                     <a className="text-lg font-semibold leading-8 tracking-tight text-tertiary brightness-110 hover:text-shadow-glow-pink" href={project.url}>{project.name}</a>
                 </span>
-                <p className="text-base leading-7 text-secondary">{project.tech_stack}</p>
-                <p className="text-sm leading-6 text-gray-500">{project.description}</p>
+                <p className="sm:text-base text-sm pb-1 text-secondary">{project.tech_stack}</p>
+                <p className="sm:text-sm text-xs text-gray-500">{project.description}</p>
               </li>
             ))}
           </ul>

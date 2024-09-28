@@ -43,10 +43,9 @@ const pacifico = Pacifico({
     return (
       <div className="relative "> 
         <div className='parallax_home_cover'></div>
-        <div className={`absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mx-auto max-w-7xl lg:px-8 px-6 pt-[50px] z-10`}>
+        <div className={`absolute lg:top-1/3 top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mx-auto max-w-[60%] lg:px-8 px-4 pt-[50px] z-10`}>
 
-          <div className="flex flex-col items-center justify-between"  style={{ "transform": `scale(${scale})`, "transition": 'transform 0.3s ease' }}
- id='responsive-area'>
+          <div className="flex flex-col items-center justify-between"  style={{ "transform": `scale(${scale})`, "transition": 'transform 0.3s ease' }} id='responsive-area'>
             <Image
               src="/profile_picture.png"
               width={350}
@@ -55,7 +54,7 @@ const pacifico = Pacifico({
               className='rounded-full mb-10 floating-image'
               priority
             />
-            <h2 className={`text-7xl font-bold tracking-tight text-primary sm:text-6x transition-all duration-500 ease-[cubic-bezier(0.175,0.885,0.32,1.275)] hover:tracking-widest hover:scale-125 ${pacifico.className}`}>Mia Nguyen</h2>
+            <h2 className={`md:text-7xl text-4xl text-nowrap font-bold tracking-tight text-primary transition-all duration-500 ease-[cubic-bezier(0.175,0.885,0.32,1.275)] hover:tracking-widest hover:scale-125 ${pacifico.className}`}>Mia Nguyen</h2>
           </div>
          
         </div>        

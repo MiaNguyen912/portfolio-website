@@ -35,7 +35,7 @@ export default function ImageSlideshow() {
 
   return (
     <div>
-      <div  className={`${classes.slideshow}  mt-10`}>
+      <div  className={`${classes.slideshow} mt-10 lg:w-[28vw] lg:h-[28vw] md:w-[40vw] md:h-[40vw] w-[60vw] h-[60vw] relative`}>
         {images.map((image, index) => (
           <Image
             key={index}
