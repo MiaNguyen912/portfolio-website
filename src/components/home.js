@@ -3,6 +3,9 @@
 import Image from 'next/image' 
 import { Pacifico } from 'next/font/google';
 import { useEffect, useState } from 'react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faD, faDownload } from "@fortawesome/free-solid-svg-icons";
+
 
 const pacifico = Pacifico({
   subsets: ['latin'],
@@ -55,6 +58,18 @@ const pacifico = Pacifico({
               priority
             />
             <h2 className={`md:text-7xl text-4xl text-nowrap font-bold tracking-tight text-primary transition-all duration-500 ease-[cubic-bezier(0.175,0.885,0.32,1.275)] hover:tracking-widest hover:scale-125 ${pacifico.className}`}>Mia Nguyen</h2>
+          
+            <div className="flex flex-row items-center justify-between gap-10 mt-14">
+              <a href="Mia_nguyen_resume.pdf" download="Mia_nguyen_resume.pdf" className="inline-block px-6 py-3 bg-primary text-white font-semibold rounded-2xl shadow-md hover:bg-pink-500 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 transition-all duration-300">
+                <FontAwesomeIcon icon={faDownload} />   {/*Download icon from FontAwesome*/}
+                Resume
+              </a>
+              <a href="UCI_Transcript.pdf" download="UCI_Transcript.pdf" className="inline-block px-6 py-3 bg-primary text-white font-semibold rounded-2xl shadow-md hover:bg-pink-500 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 transition-all duration-300">
+                <FontAwesomeIcon icon={faDownload} />   {/*Download icon from FontAwesome*/}
+                Transcript
+              </a>
+            </div>
+            
           </div>
          
         </div>        

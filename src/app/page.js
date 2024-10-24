@@ -1,11 +1,13 @@
 'use client';
+import { useEffect, useState } from "react";
 import Header from "@/components/header";
 import Home from "@/components/home";
 import About from "@/components/about";
 import Projects from "@/components/projects";
 import Contact from "@/components/contact";
 import Footer from "@/components/footer";
-import { useEffect, useState } from "react";
+import SlandedGrid from "../components/slanded-grid";
+import OrbitsAnimation from "../components/orbits-animation";
 
 export default function Main() {
   const [activeSection, setActiveSection] = useState('home');
@@ -55,6 +57,11 @@ export default function Main() {
          <div id="projects" className="section">
             <Projects />
             {/* <div className={classes.parallax_career_cover}></div> */}
+         </div>
+
+         <div id="projects" className="section">  
+            <SlandedGrid />
+            <OrbitsAnimation />
          </div>
 
         {/* Contact */}
