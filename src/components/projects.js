@@ -56,7 +56,7 @@ const projects = [
 export default function About() {
   return (
     <div className="bg-primary">
-      <main className="relative isolate py-14 overflow-x-clip">
+      <div className="relative isolate py-14 overflow-x-clip">
         <div aria-hidden="true" className="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl">
           <div
             style={{
@@ -82,7 +82,7 @@ export default function About() {
             <h2 className={`text-4xl font-bold tracking-tight text-transparent pb-6  bg-clip-text bg-gradient-to-r brightness-125 from-pink-600 to-blue-300 sm:text-6xl ${pacifico.className}`} >My projects</h2>
           </div>
 
-          <ul tech_stack="list" className="group md:mx-auto mx-8 lg:mt-20 md:mt-8 mt-4 grid max-w-2xl grid-cols-1 gap-x-14 gap-y-14 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-2 xl:grid-cols-3" >
+          <ul className="group md:mx-auto mx-8 lg:mt-20 md:mt-8 mt-4 grid max-w-2xl grid-cols-1 gap-x-14 gap-y-14 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-2 xl:grid-cols-3" >
             {projects.map((project) => (
               <li key={project.name} className='relative p-5 rounded-2xl transition-opacity duration-300 ease-in-out group-hover:opacity-50 hover:!opacity-100 hover:bg-pink-100 hover:bg-opacity-10'>
                 <div className=''>
@@ -110,7 +110,7 @@ export default function About() {
           </ul>
 
         </div>
-      </main>
+      </div>
     </div>
   )
 }
