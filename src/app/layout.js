@@ -18,8 +18,8 @@ export const metadata = {
     siteName: "Mia Nguyen Portfolio",
     locale: "en_US",
     type: "website",
-    viewport: 'width=device-width, initial-scale=1.0', 
   },
+  viewport: 'width=device-width, initial-scale=1.0', 
   robots: {
     index: true, // Allow page to be indexed in search results
     follow: true, // // Allow search engine to follow and index links on page
