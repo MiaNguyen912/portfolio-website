@@ -6,8 +6,8 @@ import About from "@/components/about";
 import Projects from "@/components/projects";
 import Contact from "@/components/contact";
 import Footer from "@/components/footer";
-import SlandedGrid from "../components/slanded-grid";
-import OrbitsAnimation from "../components/orbits-animation";
+// import SlandedGrid from "../components/slanded-grid";
+// import OrbitsAnimation from "../components/orbits-animation";
 
 export default function Main() {
   const [activeSection, setActiveSection] = useState('home');
@@ -59,10 +59,10 @@ export default function Main() {
             {/* <div className={classes.parallax_career_cover}></div> */}
          </div>
 
-         <div id="projects" className="section">  
+         {/* <div id="projects" className="section">  
             <SlandedGrid />
             <OrbitsAnimation />
-         </div>
+         </div> */}
 
         {/* Contact */}
         <div id="contact" className="section">
