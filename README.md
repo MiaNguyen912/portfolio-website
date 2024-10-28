@@ -32,7 +32,8 @@
 - Have navigation buttons on Header
 - Have buttons to download resume and transcript
 - Have an image slideshow in the About section
-- Project items are highly responsive with pop-up effect and appear clickable
+- Project section is highly responsive with pop-up effect and appears clickable
+- Project items redirect users to associated project pages
 - All buttons have shadow and hover effects (change color and cursor style) to make them seem clickable
 
 

@@ -94,7 +94,7 @@ export default function About() {
                         />
                     </a>
                     <span className='mt-6 block'>
-                        <a className="text-lg font-semibold leading-8 tracking-tight text-tertiary brightness-110 hover:text-shadow-glow-pink" href={project.url}>{project.name}</a>
+                        <a className="text-lg font-semibold leading-8 tracking-tight text-tertiary brightness-110 hover:text-shadow-glow-pink" href={project.url} target="_blank">{project.name}</a>
                     </span>
                     {
                       project.tech_stack.split(', ').map((tech) => (
