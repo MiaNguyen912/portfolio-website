@@ -2,7 +2,6 @@
 
 import ImageSlideshow from './images-slideshow'
 import { Pacifico } from 'next/font/google';
-import classes from './about.module.css'
 
 const pacifico = Pacifico({
   subsets: ['latin'],
@@ -16,12 +15,7 @@ const stats = [
   { value: ['React, Next.js, Flask, Django'], title: 'Framework / Tools' },
 ]
 
-const scrollToElement = (id) => {
-  document.getElementById(id).scrollIntoView({
-    behavior: "smooth", // Smooth scroll effect
-    block: "start",     // Align at the start of the element
-  });
-};
+
 
 export default function About() {
   return (
@@ -48,13 +42,9 @@ export default function About() {
                 full-stack development. I am excited to bring creative solutions and technical expertise to 
                 impactful projects. 
               </p>
-              {/* <a className="lg:text-lg text-sm text-secondary hover:text-shadow-glow-pink" onClick={() =>{scrollToElement('contact')}} >
+              <a className="lg:text-lg text-sm text-secondary hover:text-shadow-glow-pink" onClick={() =>{scrollToElement('contact')}} >
                 Let&apos;s connect!
-              </a> */}
-
-              <button className={classes["shiny-cta"]} onClick={() =>{scrollToElement('contact')}}>
-                <span >Let&apos;s connect!</span>
-              </button>
+              </a>
 
             </div>
 

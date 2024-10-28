@@ -52,9 +52,6 @@ const Contact = () => {
         
     }
 
-  
-
-
     return (
         <div className="2xl:px-96 lg:px-32 lg:py-32 md:px-16 px-8 py-12 mx-auto bg-primary flex justify-center items-center">
             <div className="">

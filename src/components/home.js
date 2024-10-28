@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { Pacifico } from 'next/font/google';
 import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faD, faDownload } from "@fortawesome/free-solid-svg-icons";
+import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
 
 const pacifico = Pacifico({

@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
+import next from "next";
 config.autoAddCss = false;
 
 const inter = Inter({ subsets: ["latin"] });
@@ -19,6 +20,7 @@ export const metadata = {
     locale: "en_US",
     type: "website",
   },
+  nextSizeAdjust: false,
   viewport: 'width=device-width, initial-scale=1.0', 
   robots: {
     index: true, // Allow page to be indexed in search results
