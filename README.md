@@ -1,4 +1,4 @@
-# Portfolio (live at: https://mia-portfolio-flame.vercel.app/)
+# Portfolio (https://mia-portfolio-flame.vercel.app/)
 
 
 ## Answers for INF133 A1 questions:
