@@ -8,6 +8,7 @@ import zotquest_image from '@/assets/zot_quest.png';
 import zotsearch_image from '@/assets/zot_search.png';
 import transtar_image from '@/assets/transtar.png';
 import flappybird_image from '@/assets/flappy_bird.png';
+import habitmaster_image from '@/assets/habitmaster.png';
 import TechNode from './tech-node';
 
 const pacifico = Pacifico({
@@ -16,6 +17,13 @@ const pacifico = Pacifico({
 });
 
 const projects = [
+  {
+    name: 'HabitMaster',
+    tech_stack: 'React, Next.js, Tailwind CSS, Firebase',
+    image: habitmaster_image,
+    url: 'https://habit-master-8hz8fv1by-mianguyen912s-projects.vercel.app/',
+    description: 'Habit tracking web app with a minimalist design, featuring a calendar view and a daily checklist. Users can create, update, and delete habits, as well as track their progress and view statistics.',
+  },
   {
     name: 'Fablix Movie Ticketing',
     tech_stack: 'Java, MySQL, JavaScript, Apache Tomcat, AWS, Docker',

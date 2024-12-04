@@ -1,5 +1,6 @@
 'use client'
 
+import ConnectButton from './connect-button';
 import ImageSlideshow from './images-slideshow'
 import { Pacifico } from 'next/font/google';
 
@@ -43,7 +44,7 @@ export default function About() {
                 impactful projects. 
               </p>
               <a className="lg:text-lg text-sm text-secondary hover:text-shadow-glow-pink" onClick={() =>{scrollToElement('contact')}} >
-                Let&apos;s connect!
+                <ConnectButton />
               </a>
 
             </div>
