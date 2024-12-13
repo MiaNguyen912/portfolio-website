@@ -21,8 +21,8 @@ const projects = [
     name: 'HabitMaster',
     tech_stack: 'React, Next.js, Tailwind CSS, Firebase',
     image: habitmaster_image,
-    url: 'https://habit-master-8hz8fv1by-mianguyen912s-projects.vercel.app/',
-    description: 'Habit tracking web app with a minimalist design, featuring a calendar view and a daily checklist. Users can create, update, and delete habits, as well as track their progress and view statistics.',
+    url: 'https://habit-master.vercel.app/',
+    description: 'Habit tracking web app with a minimalist design, featuring a calendar view and a daily checklist. Users can create, update, and delete habits, as well as track their progress and view statistics. View demo video at https://www.youtube.com/watch?v=g91C8ecIry0',
   },
   {
     name: 'Fablix Movie Ticketing',

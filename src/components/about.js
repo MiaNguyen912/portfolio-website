@@ -65,7 +65,7 @@ export default function About() {
                   </dt>
                   <dd className={`lg:text-2xl md:text-xl text-sm lg:mb-4 md:mb-2 mb-0 font-bold tracking-tight brightness-110 text-tertiary `}>{stat.title}</dd>
                 </div>
-              ))}
+              ))} 
             </dl>
           </div>
           
