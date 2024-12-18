@@ -5,7 +5,7 @@ import { useState } from 'react'
 const navigation = [
   { name: 'Home', href: '#home', id: 'home' },
   { name: 'About', href: '#about', id: 'about' },
-  { name: 'Project', href: '#projects', id: 'projects' },
+  { name: 'Projects', href: '#projects', id: 'projects' },
   { name: 'Contact', href: '#contact', id: 'contact' },
 ]
 
