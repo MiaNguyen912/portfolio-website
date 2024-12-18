@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import classes from './images-slideshow.module.css';
+import classes from '@/styles/images-slideshow.module.css';
 
 import image1 from '@/assets/profile_image_1.jpg';
 import image2 from '@/assets/profile_image_2.JPG';

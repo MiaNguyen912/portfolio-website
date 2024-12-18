@@ -6,8 +6,10 @@ import About from "@/components/about";
 import Projects from "@/components/projects";
 import Contact from "@/components/contact";
 import Footer from "@/components/footer";
-// import SlandedGrid from "../components/slanded-grid";
-// import OrbitsAnimation from "../components/orbits-animation";
+
+import SlandedGrid from "../components/slanded-grid";
+import OrbitsAnimation from "../components/orbits-animation";
+import Graphic3D from "@/components/graphic-3D";
 
 export default function Main() {
   const [activeSection, setActiveSection] = useState('home');
@@ -37,6 +39,7 @@ export default function Main() {
   }, []);
 
 
+
   return (
     <>
       <Header activeSection={activeSection} />
@@ -45,7 +48,6 @@ export default function Main() {
           {/* Home */}
          <div id="home" className="section">
             <Home />
-            {/* <ImageSlideshow /> */}
          </div>
 
          {/* About */}
@@ -53,13 +55,14 @@ export default function Main() {
             <About />
          </div>
 
-         {/* Career */}
+         {/* Project */}
          <div id="projects" className="section">
             <Projects />
-            {/* <div className={classes.parallax_career_cover}></div> */}
+            
          </div>
 
-         {/* <div id="projects" className="section">  
+         {/* <div id="test" className="section">  
+            <Graphic3D />
             <SlandedGrid />
             <OrbitsAnimation />
          </div> */}

@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { Pacifico } from 'next/font/google';
 import Image from 'next/image';
 import fablix_image from '@/assets/fablix.png';
@@ -10,6 +10,8 @@ import transtar_image from '@/assets/transtar.png';
 import flappybird_image from '@/assets/flappy_bird.png';
 import habitmaster_image from '@/assets/habitmaster.png';
 import TechNode from './tech-node';
+import { motion } from "motion/react"
+
 
 const pacifico = Pacifico({
   subsets: ['latin'],
@@ -61,10 +63,25 @@ const projects = [
   },
 ]
 
+const motionVariants = { // Variants are a set of named targets.
+  offscreen: {
+      y: 300,
+  },
+  onscreen: {
+      y: 0,
+      transition: {type: "spring", bounce: 0.4, duration: 0.8,},
+  },
+};
+
 export default function About() {
+
   return (
     <div className="bg-primary">
       <div className="relative isolate py-14 overflow-x-clip">
+        <motion.div initial="offscreen" whileInView="onscreen" viewport={{ once: true }} variants={motionVariants}>
+
+
+            
         <div aria-hidden="true" className="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl">
           <div
             style={{
@@ -86,6 +103,7 @@ export default function About() {
         </div>
 
         <div className="mx-auto max-w-7xl sm:my-40 lg:px-8">
+
           <div className="mx-auto max-w-2xl text-center " >
             <h2 className={`text-4xl font-bold tracking-tight text-transparent pb-6  bg-clip-text bg-gradient-to-r brightness-125 from-pink-600 to-blue-300 sm:text-6xl ${pacifico.className}`} >My projects</h2>
           </div>
@@ -116,8 +134,10 @@ export default function About() {
               </li>
             ))}
           </ul>
-
         </div>
+
+
+        </motion.div>
       </div>
     </div>
   )

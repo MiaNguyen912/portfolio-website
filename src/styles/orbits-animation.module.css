@@ -1,0 +1,77 @@
+/* https://codersblock.com/blog/making-orbit-animations-with-css-custom-properties/  */
+
+@property --angle {
+  syntax: '<angle>';
+  inherits: true;
+  initial-value: 0deg;
+}
+
+
+@property --z {
+  syntax: '<integer>';
+  inherits: true;
+  initial-value: 0;
+}
+
+@keyframes revolve {
+  from {
+    --angle: 0deg;
+    --z: 4;
+  }
+  to {
+    --angle: 360deg;
+    --z: 5;
+  }
+}
+
+
+
+
+.planet, .moon, .satellite, .potato {
+  grid-area: 1 / 1;
+  padding: 10px;
+  border: 4px dashed #f4ead5;
+  border-radius: 50%;
+  background-color: #215a6d;
+}
+
+.planet {
+  z-index: 5;
+}
+
+.moon, .satellite, .potato {
+  --x-amplitude: 150px;
+  --y-amplitude: 40px;
+  --x: calc(cos(var(--angle)) * var(--x-amplitude)); /* calculate (x,y) of object using trigonomery */
+  --y: calc(sin(var(--angle)) * var(--y-amplitude));
+  transform:
+    rotate(var(--rotation))
+    translate(var(--x), var(--y))
+    rotate(calc(var(--rotation) * -1));
+  z-index: calc(var(--z)); /* calc() is for Safari */
+  animation: revolve 6s linear infinite;
+}
+
+
+.moon {
+  --rotation: 0deg;
+  animation-delay: 0s;
+}
+
+.satellite {
+  --rotation: 60deg;
+  animation-delay: -2s;
+}
+
+.potato {
+  --rotation: 120deg;
+  animation-delay: -4s;
+}
+
+.planet img {
+  width: 150px;
+}
+
+.moon img, .satellite img, .potato img {
+  width: 50px;
+}

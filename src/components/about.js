@@ -3,6 +3,8 @@
 import ConnectButton from './connect-button';
 import ImageSlideshow from './images-slideshow'
 import { Pacifico } from 'next/font/google';
+import { motion } from "motion/react"
+
 
 const pacifico = Pacifico({
   subsets: ['latin'],
@@ -10,13 +12,30 @@ const pacifico = Pacifico({
 });
 
 const stats = [
-  { value: ['University of California, Irvine', <br />,'BS in Computer Science'], title: 'Academic' },
-  { value: ['4.0'], title: 'GPA' },
-  { value: ['JavaScript, Python, SQL'], title: 'Languages' },
-  { value: ['React, Next.js, Flask, Django'], title: 'Framework / Tools' },
+  { value: ['University of California, Irvine', <br />,'BS in Computer Science',  <br />, <strong>GPA: 4.0</strong>], title: 'Academic' },
+  { value: ['JavaScript, Python, Java, C#, SQL'], title: 'Languages' },
+  { value: ['React, Next.js, Flask, Django, ASP.NET, Firebase, AWS, Git, Docker'], title: 'Framework / Tools' },
 ]
 
 
+const cardContainer = {
+  // padding: 20,
+  // borderRadius: 10,
+  // boxShadow: "0 0 10px 0 rgba(0, 0, 0, 0.1)",
+  // border: "1px solid #e17caa",
+  // backgroundColor: "transparent",
+};
+
+
+const cardVariants = { // Variants are a set of named targets.
+  offscreen: {
+      y: 300,
+  },
+  onscreen: {
+      y: 50,
+      transition: {type: "spring", bounce: 0.4, duration: 0.8,},
+  },
+};
 
 export default function About() {
   return (
@@ -24,7 +43,8 @@ export default function About() {
       <div className="relative isolate mb-4">
         <div className="px-6 py-14 lg:px-8">
 
-          <div className='flex xl:flex-row flex-col gap-4 justify-between items-center'> 
+          {/* intro paragraph & images slideshow */}
+          <div initial={{ x:-500 }} animate={{ x: 0 }} className='flex xl:flex-row flex-col gap-4 justify-between items-center'> 
             <div className="relative text-left lg:mr-10 mr:0">
               <h2 className={`text-4xl font-bold tracking-tight brightness-125 text-tertiary sm:text-6xl ${pacifico.className}`}>About me</h2>
               <p className="mt-6 lg:text-lg text-sm text-secondary">
@@ -52,22 +72,34 @@ export default function About() {
             <ImageSlideshow />
           </div>
 
-
-
+          {/* stats */}
           <div className="mx-auto mt-12 max-w-2xl lg:mx-0 lg:max-w-none ">
-            <dl className="mt-16 grid gap-8 sm:mt-20 grid-cols-2 lg:grid-cols-4 ">
+            <dl className="mt-16 grid gap-8 sm:mt-20 grid-cols-2 lg:grid-cols-3 ">
               {stats.map((stat) => (
-                <div key={stat.title} className="flex flex-col-reverse justify-end">
-                  <dt className="lg:text-base text-xs text-tertiary">
+                <motion.div key={stat.title} style={cardContainer} initial="offscreen" whileInView="onscreen" viewport={{ once: true, amount: 0.3}} variants={cardVariants} className="flex flex-col-reverse justify-end">
+                    <dt className="lg:text-base text-xs text-tertiary">
                     {stat.value.map((line, idx) => (
-                      <span key={idx}>{line}</span>
-                    ))}
-                  </dt>
-                  <dd className={`lg:text-2xl md:text-xl text-sm lg:mb-4 md:mb-2 mb-0 font-bold tracking-tight brightness-110 text-tertiary `}>{stat.title}</dd>
-                </div>
+                        <span key={idx}>{line}</span>
+                      ))}
+                    </dt>
+                    <dd className={`lg:text-2xl md:text-xl text-sm lg:mb-4 md:mb-2 mb-0 font-bold tracking-tight brightness-110 text-tertiary `}>{stat.title}</dd>
+                </motion.div>
+
+                // <div key={stat.title} className="flex flex-col-reverse justify-end">
+                //   <dt className="lg:text-base text-xs text-tertiary">
+                //     {stat.value.map((line, idx) => (
+                //       <span key={idx}>{line}</span>
+                //     ))}
+                //   </dt>
+                //   <dd className={`lg:text-2xl md:text-xl text-sm lg:mb-4 md:mb-2 mb-0 font-bold tracking-tight brightness-110 text-tertiary `}>{stat.title}</dd>
+                // </div>
               ))} 
             </dl>
           </div>
+
+
+
+          
           
         </div>
       </div>
