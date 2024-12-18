@@ -65,11 +65,12 @@ const projects = [
 
 const motionVariants = { // Variants are a set of named targets.
   offscreen: {
-      y: 300,
+    opacity: 0,
+    y: 400,
   },
   onscreen: {
-      y: 0,
-      transition: {type: "spring", bounce: 0.4, duration: 0.8,},
+    opacity: 1,
+    y: 0,
   },
 };
 
@@ -78,65 +79,66 @@ export default function About() {
   return (
     <div className="bg-primary">
       <div className="relative isolate py-14 overflow-x-clip">
-        <motion.div initial="offscreen" whileInView="onscreen" viewport={{ once: true }} variants={motionVariants}>
+        <motion.div  initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1.3, y: 0 }}transition={{ duration: 0.8}} viewport={{ once: true }} variants={motionVariants}>
 
 
-            
-        <div aria-hidden="true" className="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl">
-          <div
-            style={{
-              clipPath:
-                'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
-            }}
-            className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20"
-          />
-        </div>
-
-        <div aria-hidden="true" className="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu">
-          <div
-            style={{
-              clipPath:
-                'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
-            }}
-            className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20"
-          />
-        </div>
-
-        <div className="mx-auto max-w-7xl sm:my-40 lg:px-8">
-
-          <div className="mx-auto max-w-2xl text-center " >
-            <h2 className={`text-4xl font-bold tracking-tight text-transparent pb-6  bg-clip-text bg-gradient-to-r brightness-125 from-pink-600 to-blue-300 sm:text-6xl ${pacifico.className}`} >My projects</h2>
-          </div>
-
-          <ul className="group md:mx-auto mx-8 lg:mt-20 md:mt-8 mt-4 grid max-w-2xl grid-cols-1 gap-x-14 gap-y-14 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-2 xl:grid-cols-3" >
-            {projects.map((project) => (
-              <li key={project.name} className='relative p-5 rounded-2xl transition-opacity duration-300 ease-in-out group-hover:opacity-50 hover:!opacity-100 hover:bg-pink-100 hover:bg-opacity-10'>
-                <div className=''>
-                    <a href={project.url} target="_blank" className='transition-transform duration-300 ease-in-out  hover:brightness-110'>
-                        <Image 
-                          alt={project.name}
-                          src={project.image} 
-                          className="aspect-[14/10] w-full mx-auto rounded-2xl object-fit transition-all duration-300 ease-in-out hover:rotate-3 hover:scale-110 hover:shadow-lg hover:shadow-black " 
-                        />
-                    </a>
-                    <span className='mt-6 block'>
-                        <a className="text-lg font-semibold leading-8 tracking-tight text-tertiary brightness-110 hover:text-shadow-glow-pink" href={project.url} target="_blank">{project.name}</a>
-                    </span>
-                    {
-                      project.tech_stack.split(', ').map((tech) => (
-                        <TechNode key={tech}>{tech}</TechNode>
-                      ))
-                    }
-                    <p className="sm:text-sm text-xs text-gray-300">{project.description}</p>
+            <div>
+                <div aria-hidden="true" className="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl">
+                  <div
+                    style={{
+                      clipPath:
+                        'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
+                    }}
+                    className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20"
+                  />
                 </div>
-          
-                
-              </li>
-            ))}
-          </ul>
-        </div>
 
+                <div aria-hidden="true" className="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu">
+                  <div
+                    style={{
+                      clipPath:
+                        'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
+                    }}
+                    className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20"
+                  />
+                </div>
 
+                <div className="mx-auto max-w-7xl sm:my-40 lg:px-8">
+
+                  <div className="mx-auto max-w-2xl text-center " >
+                    <h2 className={`text-4xl font-bold tracking-tight text-transparent pb-6  bg-clip-text bg-gradient-to-r brightness-125 from-pink-600 to-blue-300 sm:text-6xl ${pacifico.className}`} >My projects</h2>
+                  </div>
+
+                  <ul className="group md:mx-auto mx-8 lg:mt-20 md:mt-8 mt-4 grid max-w-2xl grid-cols-1 gap-x-14 gap-y-14 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-2 xl:grid-cols-3" >
+                    {projects.map((project) => (
+                      <li key={project.name} className='relative p-5 rounded-2xl transition-opacity duration-300 ease-in-out group-hover:opacity-50 hover:!opacity-100 hover:bg-pink-100 hover:bg-opacity-10'>
+                        <div className=''>
+                            <a href={project.url} target="_blank" className='transition-transform duration-300 ease-in-out  hover:brightness-110'>
+                                <Image 
+                                  alt={project.name}
+                                  src={project.image} 
+                                  className="aspect-[14/10] w-full mx-auto rounded-2xl object-fit transition-all duration-300 ease-in-out hover:rotate-3 hover:scale-110 hover:shadow-lg hover:shadow-black " 
+                                />
+                            </a>
+                            <span className='mt-6 block'>
+                                <a className="text-lg font-semibold leading-8 tracking-tight text-tertiary brightness-110 hover:text-shadow-glow-pink" href={project.url} target="_blank">{project.name}</a>
+                            </span>
+                            {
+                              project.tech_stack.split(', ').map((tech) => (
+                                <TechNode key={tech}>{tech}</TechNode>
+                              ))
+                            }
+                            <p className="sm:text-sm text-xs text-gray-300">{project.description}</p>
+                        </div>
+                  
+                        
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+            </div>
         </motion.div>
       </div>
     </div>

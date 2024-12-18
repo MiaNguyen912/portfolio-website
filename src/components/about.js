@@ -27,15 +27,6 @@ const cardContainer = {
 };
 
 
-const cardVariants = { // Variants are a set of named targets.
-  offscreen: {
-      y: 300,
-  },
-  onscreen: {
-      y: 50,
-      transition: {type: "spring", bounce: 0.4, duration: 0.8,},
-  },
-};
 
 export default function About() {
   return (
@@ -44,39 +35,49 @@ export default function About() {
         <div className="px-6 py-14 lg:px-8">
 
           {/* intro paragraph & images slideshow */}
-          <div initial={{ x:-500 }} animate={{ x: 0 }} className='flex xl:flex-row flex-col gap-4 justify-between items-center'> 
-            <div className="relative text-left lg:mr-10 mr:0">
-              <h2 className={`text-4xl font-bold tracking-tight brightness-125 text-tertiary sm:text-6xl ${pacifico.className}`}>About me</h2>
-              <p className="mt-6 lg:text-lg text-sm text-secondary">
-                I&apos;m a senior Computer Science student at the University of California, Irvine, passionate about 
-                crafting innovative web applications and tackling complex technical challenges. With hands-on 
-                experience in both front-end and back-end development through internships and personal projects, 
-                I specialize in cutting-edge frameworks like React, Next.js, and Tailwind CSS, alongside strong 
-                proficiency in programming languages such as JavaScript, Python, Java, and C++.
-              </p>
-              <p className="mt-6 lg:text-lg text-sm text-secondary">
-                Beyond tech, I love exploring the world, whether it&apos;s hiking through beautiful landscapes, traveling 
-                to new destinations, or diving into different cuisines. 
-              </p>
-              <p className="my-6 lg:text-lg text-sm  text-secondary">
-                As a software engineer, I&apos;m eager to continue growing and learning, particularly in front-end and 
-                full-stack development. I am excited to bring creative solutions and technical expertise to 
-                impactful projects. 
-              </p>
-              <a className="lg:text-lg text-sm text-secondary hover:text-shadow-glow-pink" onClick={() =>{scrollToElement('contact')}} >
-                <ConnectButton />
-              </a>
+          <div className='flex xl:flex-row flex-col gap-4 justify-between items-center'> 
+            
+            <motion.div initial={{ opacity:0, x:-200 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.7, duration: 0.7 }} >
+                <div className="relative text-left lg:mr-10 mr:0">
+                  <h2 className={`text-4xl font-bold tracking-tight brightness-125 text-tertiary sm:text-6xl ${pacifico.className}`}>About me</h2>
+                  <p className="mt-6 lg:text-lg text-sm text-secondary">
+                    I&apos;m a senior Computer Science student at the University of California, Irvine, passionate about 
+                    crafting innovative web applications and tackling complex technical challenges. With hands-on 
+                    experience in both front-end and back-end development through internships and personal projects, 
+                    I specialize in cutting-edge frameworks like React, Next.js, and Tailwind CSS, alongside strong 
+                    proficiency in programming languages such as JavaScript, Python, Java, and C++.
+                  </p>
+                  <p className="mt-6 lg:text-lg text-sm text-secondary">
+                    Beyond tech, I love exploring the world, whether it&apos;s hiking through beautiful landscapes, traveling 
+                    to new destinations, or diving into different cuisines. 
+                  </p>
+                  <p className="my-6 lg:text-lg text-sm  text-secondary">
+                    As a software engineer, I&apos;m eager to continue growing and learning, particularly in front-end and 
+                    full-stack development. I am excited to bring creative solutions and technical expertise to 
+                    impactful projects. 
+                  </p>
+                  <a className="lg:text-lg text-sm text-secondary hover:text-shadow-glow-pink" onClick={() =>{scrollToElement('contact')}} >
+                    <ConnectButton />
+                  </a>
 
-            </div>
+                </div>
+            </motion.div>
 
-            <ImageSlideshow />
+            <motion.div 
+              initial={{ opacity: 0, x: 200 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.7, duration: 0.7 }}
+            >
+                <ImageSlideshow />
+            </motion.div>
           </div>
 
           {/* stats */}
           <div className="mx-auto mt-12 max-w-2xl lg:mx-0 lg:max-w-none ">
             <dl className="mt-16 grid gap-8 sm:mt-20 grid-cols-2 lg:grid-cols-3 ">
               {stats.map((stat) => (
-                <motion.div key={stat.title} style={cardContainer} initial="offscreen" whileInView="onscreen" viewport={{ once: true, amount: 0.3}} variants={cardVariants} className="flex flex-col-reverse justify-end">
+                <motion.div key={stat.title} style={cardContainer} initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1.3, y: 0 }} transition={{ delay: 1, duration: 0.7 }} viewport={{ once: true}} className="flex flex-col-reverse justify-end">
                     <dt className="lg:text-base text-xs text-tertiary">
                     {stat.value.map((line, idx) => (
                         <span key={idx}>{line}</span>
