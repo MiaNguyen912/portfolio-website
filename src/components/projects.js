@@ -9,6 +9,7 @@ import zotsearch_image from '@/assets/zot_search.png';
 import transtar_image from '@/assets/transtar.png';
 import flappybird_image from '@/assets/flappy_bird.png';
 import habitmaster_image from '@/assets/habitmaster.png';
+import superworld_image from '@/assets/superworld.png';
 import TechNode from './tech-node';
 import { motion } from "motion/react"
 
@@ -19,6 +20,13 @@ const pacifico = Pacifico({
 });
 
 const projects = [
+  {
+    name: 'SuperWorld Map',
+    tech_stack: 'React.js, Redux, Node.js, Material UI',
+    image: superworld_image,
+    url: 'https://map.superworldapp.com/',
+    description: 'SuperWorld is an advanced interactive mapping platform that facilitates the exploration, visualization, and transaction of virtual real estate. It integrates geospatial data with user-generated content, enabling seamless property discovery and interaction. The platform incorporates blockchain technology, specifically Ethereum, to ensure secure, transparent transactions and verifiable ownership of digital assets. By combining elements of geolocation-based services with social and commercial functionalities, SuperWorld allows users to buy, sell, and manage virtual properties while creating and sharing immersive content.'
+  },
   {
     name: 'HabitMaster',
     tech_stack: 'React, Next.js, Tailwind CSS, Firebase',
