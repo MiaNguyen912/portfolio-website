@@ -10,6 +10,7 @@ import transtar_image from '@/assets/transtar.png';
 import flappybird_image from '@/assets/flappy_bird.png';
 import habitmaster_image from '@/assets/habitmaster.png';
 import superworld_image from '@/assets/superworld.png';
+import aspirely_image from '@/assets/aspirely.png';
 import TechNode from './tech-node';
 import { motion } from "motion/react"
 
@@ -20,6 +21,13 @@ const pacifico = Pacifico({
 });
 
 const projects = [
+    {
+    name: 'Aspirely',
+    tech_stack: 'Next.js, TypeScript, React Flow, Google Gemini API, OpenResume, Vercel',
+    image: aspirely_image,
+    url: 'https://aspirely-career-planner.vercel.app/',
+    description: 'Aspirely is an AI-powered web app that transforms your resume into an interactive career mind map. We analyze your resume to identify key skills, interests, and experience, suggest tailored career pathways based on your profile, and break each pathway into career modules to make it look approachable, including role overview, suggested skills, personalized skill progress estimation, and learning resources. By clicking into each role or skill, users get a deeper understanding of what to expect and how to upskill effectively.'
+  },
   {
     name: 'SuperWorld Map',
     tech_stack: 'React.js, Redux, Node.js, Material UI',
