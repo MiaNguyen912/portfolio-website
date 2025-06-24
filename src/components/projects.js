@@ -11,6 +11,7 @@ import flappybird_image from '@/assets/flappy_bird.png';
 import habitmaster_image from '@/assets/habitmaster.png';
 import superworld_image from '@/assets/superworld.png';
 import aspirely_image from '@/assets/aspirely.png';
+import zara_image from '@/assets/zara.png';
 import TechNode from './tech-node';
 import { motion } from "motion/react"
 
@@ -36,11 +37,11 @@ const projects = [
     description: 'SuperWorld is an advanced interactive mapping platform that facilitates the exploration, visualization, and transaction of virtual real estate. It integrates geospatial data with user-generated content, enabling seamless property discovery and interaction. The platform incorporates blockchain technology, specifically Ethereum, to ensure secure, transparent transactions and verifiable ownership of digital assets. By combining elements of geolocation-based services with social and commercial functionalities, SuperWorld allows users to buy, sell, and manage virtual properties while creating and sharing immersive content.'
   },
   {
-    name: 'HabitMaster',
-    tech_stack: 'React, Next.js, Tailwind CSS, Firebase',
-    image: habitmaster_image,
-    url: 'https://habit-master.vercel.app/',
-    description: 'Habit tracking web app with a minimalist design, featuring a calendar view and a daily checklist. Users can create, update, and delete habits, as well as track their progress and view statistics. View demo video at https://www.youtube.com/watch?v=g91C8ecIry0',
+    name: 'Zara Ecommerce',    
+    tech_stack: 'React, Next.js, TypeScript, Material UI, ShadCN UI',
+    image: zara_image,
+    url: 'https://zara-ecommerce-website.vercel.app/',
+    description: 'Redesigned the Zara e-commerce web app with a focus on user-centered design, accessibility, and responsive layout improvements. View the before-and-after comparison: Design Comparison at https://drive.google.com/file/d/1YPpOinBebHYRLnvBugLPX0H3S-uBh4B9/view?usp=drive_link'
   },
   {
     name: 'Fablix Movie Ticketing',
@@ -50,11 +51,11 @@ const projects = [
     description: 'Full-featured movie ticketing web app with separate client and employee interfaces, supporting bulk data import from XML files. Using Google ReCaptcha and Jasypt for password encryption to enhanced security.'
   },
   {
-    name: 'Zot Quest',
-    tech_stack: 'JavaScript, Tailwind CSS',
-    image: zotquest_image,
-    description: 'Interactive map application using the leaflet.js library to detect and display real-time user locations. Includes a "bucket list" feature for users to explore and locate attractions on the UCI campus. Awarded Third Place at the UCI ZotHacks 2023 beginner hackathon, competing against over a hundred participants.',
-    url: 'https://devpost.com/software/zot-quest',
+    name: 'HabitMaster',
+    tech_stack: 'React, Next.js, Tailwind CSS, Firebase',
+    image: habitmaster_image,
+    url: 'https://habit-master.vercel.app/',
+    description: 'Habit tracking web app with a minimalist design, featuring a calendar view and a daily checklist. Users can create, update, and delete habits, as well as track their progress and view statistics. View demo video at https://www.youtube.com/watch?v=g91C8ecIry0',
   },
   {
     name: 'Zot Search',
@@ -62,6 +63,13 @@ const projects = [
     image: zotsearch_image,
     description: 'A search engine that tokenizes and ranks a vast number of websites based on their tf-idf scores and cosine similarities.',
     url: 'https://drive.google.com/file/d/1QoJMaZMIe5u3u9wrUWy0Rm1WAr0Xn7nK/view?usp=sharing',
+  },
+  {
+    name: 'Zot Quest',
+    tech_stack: 'JavaScript, Tailwind CSS',
+    image: zotquest_image,
+    description: 'Interactive map application using the leaflet.js library to detect and display real-time user locations. Includes a "bucket list" feature for users to explore and locate attractions on the UCI campus. Awarded Third Place at the UCI ZotHacks 2023 beginner hackathon, competing against over a hundred participants.',
+    url: 'https://devpost.com/software/zot-quest',
   },
   {
     name: 'TransStar Aircraft Interiors Landing Page',

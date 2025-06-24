@@ -26,6 +26,12 @@ const cardContainer = {
   // backgroundColor: "transparent",
 };
 
+const scrollToElement = (id) => {
+  document.getElementById(id).scrollIntoView({
+    behavior: "smooth", // Smooth scroll effect
+    block: "start",     // Align at the start of the element
+  });
+};
 
 
 export default function About() {
@@ -41,11 +47,11 @@ export default function About() {
                 <div className="relative text-left lg:mr-10 mr:0">
                   <h2 className={`text-4xl font-bold tracking-tight brightness-125 text-tertiary sm:text-6xl ${pacifico.className}`}>About me</h2>
                   <p className="mt-6 lg:text-lg text-sm text-secondary">
-                    I&apos;m a senior Computer Science student at the University of California, Irvine, passionate about 
+                    I&apos;m a new grad Computer Science student at the University of California, Irvine, passionate about 
                     crafting innovative web applications and tackling complex technical challenges. With hands-on 
-                    experience in both front-end and back-end development through internships and personal projects, 
-                    I specialize in cutting-edge frameworks like React, Next.js, and Tailwind CSS, alongside strong 
-                    proficiency in programming languages such as JavaScript, Python, Java, and C++.
+                    experience in both front-end and back-end development, I specialize in cutting-edge frameworks 
+                    like React, Next.js, and Tailwind CSS, alongside strong proficiency in programming languages 
+                    such as JavaScript, Python, Java, and C++.
                   </p>
                   <p className="mt-6 lg:text-lg text-sm text-secondary">
                     Beyond tech, I love exploring the world, whether it&apos;s hiking through beautiful landscapes, traveling 
