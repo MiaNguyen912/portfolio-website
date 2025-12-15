@@ -40,7 +40,7 @@ const projects = [
     name: 'Zara Ecommerce',    
     tech_stack: 'React, Next.js, TypeScript, Material UI, ShadCN UI',
     image: zara_image,
-    url: 'https://zara-ecommerce-website.vercel.app/',
+    url: 'https://zara-ecommerce-web-app.vercel.app/',
     description: 'Redesigned the Zara e-commerce web app with a focus on user-centered design, accessibility, and responsive layout improvements. View the before-and-after comparison: Design Comparison at https://drive.google.com/file/d/1YPpOinBebHYRLnvBugLPX0H3S-uBh4B9/view?usp=drive_link'
   },
   {
